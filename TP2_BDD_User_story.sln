@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP2_BDD_User_story", "TP2_BDD_User_story\TP2_BDD_User_story.csproj", "{92A8A13E-A013-4BDF-A720-D39C35D90721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VotingSystem", "VotingSystem\VotingSystem.csproj", "{F0FAD221-4B73-45C8-A411-23D35017D94D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92A8A13E-A013-4BDF-A720-D39C35D90721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A8A13E-A013-4BDF-A720-D39C35D90721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A8A13E-A013-4BDF-A720-D39C35D90721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A8A13E-A013-4BDF-A720-D39C35D90721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0FAD221-4B73-45C8-A411-23D35017D94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0FAD221-4B73-45C8-A411-23D35017D94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0FAD221-4B73-45C8-A411-23D35017D94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0FAD221-4B73-45C8-A411-23D35017D94D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
