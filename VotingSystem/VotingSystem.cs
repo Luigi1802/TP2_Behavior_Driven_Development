@@ -12,8 +12,9 @@ public class Ballot
     public bool IsClosed { get; private set; }
     public bool isSecondRound { get; private set; }
     public Dictionary<string, int> Votes { get; private set; } = new();
+    public int BlankVotes { get; private set; } = 0;
 
-    private int _totalVotes => Votes.Values.Sum();
+    private int _totalVotes => Votes.Values.Sum() + BlankVotes;
 
     public void AddCandidateVote(string candidateName, int voteCount)
     {
@@ -23,6 +24,11 @@ public class Ballot
         }
 
         Votes[candidateName] += voteCount;
+    }
+    
+    public void AddBlankVote(int count = 1)
+    {
+        BlankVotes += count;
     }
 
     public void EndBallot()
@@ -44,6 +50,16 @@ public class Ballot
             })
             .OrderByDescending(r => r.VoteCount)
             .ToList();
+            
+        if (BlankVotes > 0)
+        {
+            results.Add(new CandidateResult
+            {
+                Name = "Blank",
+                VoteCount = BlankVotes,
+                Percentage = Math.Round((double)BlankVotes / _totalVotes * 100)
+            });
+        }
 
         if (!isSecondRound)
         {

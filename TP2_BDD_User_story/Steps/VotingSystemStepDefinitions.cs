@@ -6,7 +6,6 @@ namespace TP2_BDD_User_story.Steps;
 [Binding]
 public sealed class VotingSystemStepDefinitions
 {
-    // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
     private List<CandidateResult> _results;
     private string _winner;
@@ -99,5 +98,11 @@ public sealed class VotingSystemStepDefinitions
     public void ThenTheThreeCandidatesAreQualified()
     {
         _ballot.Votes.Count.Should().Be(3);
+    }
+
+    [Given(@"(.*) blank votes are submitted")]
+    public void GivenBlankVotesAreSubmitted(int blankVotes)
+    {
+        _ballot.AddBlankVote(blankVotes);
     }
 }
